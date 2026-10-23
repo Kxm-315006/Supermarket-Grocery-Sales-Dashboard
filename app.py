@@ -17,6 +17,14 @@ def load_data(uploaded_file=None):
         xlsx_path = base / "BlinkIT Grocery Data.xlsx"
         data = pd.read_csv(csv_path) if csv_path.exists() else pd.read_excel(xlsx_path)
     data.columns = data.columns.str.strip()
+    required = {"Item Fat Content", "Item Type", "Outlet Type", "Outlet Location Type", "Sales", "Item Visibility", "Outlet Identifier"}
+    missing = required.difference(data.columns)
+    if missing or data.empty:
+        st.error(
+            "The dataset in this repository is not fully uploaded yet. Upload the original BlinkIT Grocery Data.xlsx "
+            "or the complete BlinkIT_Grocery_Data.csv using the sidebar file uploader to run the dashboard."
+        )
+        st.stop()
     data["Item Fat Content"] = data["Item Fat Content"].replace({"LF": "Low Fat", "low fat": "Low Fat", "reg": "Regular"})
     return data
 
