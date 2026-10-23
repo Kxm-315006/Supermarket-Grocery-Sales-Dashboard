@@ -10,8 +10,9 @@ An interactive data analytics project built around the supplied BlinkIT grocery 
 
 ## Files
 - `app.py` — interactive dashboard with sidebar filters and four analysis tabs.
-- `BlinkIT_Grocery_Data.csv` — cleaned dataset used by the dashboard.
-- `Supermarket_Sales_Analysis.xlsx` — Excel workbook with executive metrics and analysis sheets.
+- `BlinkIT_Grocery_Data.csv` — complete cleaned dataset (8,523 records, 12 columns) used by the dashboard.
+- `BlinkIT Grocery Data.xlsx` — original supplied dataset.
+- `Supermarket_Sales_Analysis.xlsx` — analysis workbook with eight sheets: Executive Summary, Category Sales, Outlet Type Sales, Outlet Sales, Fat Content Sales, Category by Outlet, Visibility Analysis, and Cleaned Data.
 - `requirements.txt` — Python dependencies.
 
 ## Run locally (Windows PowerShell)
